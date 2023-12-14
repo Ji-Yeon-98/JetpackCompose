@@ -63,6 +63,7 @@ class MainActivity : ComponentActivity() {
                         onValueChange = setValue
                     )
                     Button(onClick = {
+                        keyboardController?.hide()
                         scope.launch {
                             snackbarHostState.showSnackbar("Hello $text")
                         }
